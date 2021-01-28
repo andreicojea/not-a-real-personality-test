@@ -1,1 +1,65 @@
-/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/reset-css/sass/reset';
+@import 'variables';
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: $text-color;
+  line-height: 1.5
+  ;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oleo Script', cursive;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 64px;
+}
+
+h2 {
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+p, ul {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+ul {
+  line-height: 2em;
+  li {
+    &:before {
+      content: '➔';
+      padding: 0 20px;
+    }
+  }
+}
+
+a {
+  color: $text-color;
+  &:hover {
+    text-decoration-style: double;
+  }
+}
+
+strong {
+  font-weight: bold;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.section {
+  margin: 40px 0;
+  &:last-child {
+    margin-bottom: 100px;
+  }
+}
