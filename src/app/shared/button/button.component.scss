@@ -2,10 +2,8 @@
 
 :host {
   display: inline-block;
-}
-
-button {
-  display: block;
+  text-decoration: none;
+  font-family: 'Oleo Script', cursive;
   background: $white;
   border: none;
   border-radius: 100px;

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-button',
+  // tslint:disable-next-line:component-selector
+  selector: 'a[app-button], button[app-button]',
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss']
 })
