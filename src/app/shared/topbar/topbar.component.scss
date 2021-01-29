@@ -24,9 +24,11 @@
     padding-top: 5px;
     background: $header-background;
     border-bottom: 5px solid $header-accent;
-    animation: fadein 300ms;
     .logo {
       width: 180px;
+    }
+    &.animated {
+      animation: fadein 300ms;
     }
   }
 }

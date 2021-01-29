@@ -11,6 +11,9 @@ export class TopbarComponent implements OnInit {
   @HostBinding('class.sticky')
   @Input() sticky = false;
 
+  @HostBinding('class.animated')
+  @Input() animated = true;
+
   faFacebook = faFacebook;
   faTwitter = faTwitter;
   faInstagram = faInstagram;
