@@ -1,0 +1,17 @@
+@import '../../../variables.scss';
+
+:host {
+  display: block;
+  background: #efefefef;
+  box-shadow: inset 0px 4px 4px rgba(#000000, 0.25);
+  border-radius: 10px;
+  height: 20px;
+}
+
+.progress {
+  height: 100%;
+  min-width: 20px;
+  background: $terracotta;
+  border-radius: 10px;
+  transition: 300ms ease;
+}

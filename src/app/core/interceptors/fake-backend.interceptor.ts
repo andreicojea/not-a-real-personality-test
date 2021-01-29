@@ -4,6 +4,8 @@ import { HttpRequest, HttpResponse, HttpHandler, HttpEvent, HttpInterceptor, HTT
 import { Observable, of } from 'rxjs';
 import { delay, materialize, dematerialize } from 'rxjs/operators';
 import { PersonalityType } from '../enums/personality-type.enum';
+import { Question } from '../types/question';
+import { Answer } from '../types/answer';
 
 @Injectable()
 export class FakeBackendInterceptor implements HttpInterceptor {
@@ -18,11 +20,15 @@ export class FakeBackendInterceptor implements HttpInterceptor {
   }
 
   private handleRequest(request: HttpRequest<any>, next: HttpHandler): Observable<any> {
-    const { url, method } = request;
+    const { url, method, body } = request;
 
     switch (true) {
-      case url.match(/\/quiz-result\/\d+$/) && method === 'GET':
+      case url.match(/\/quiz-results\/\d+$/) && method === 'GET':
         return this.getQuizResult(this.idFromUrl(url));
+      case url.endsWith('/quiz-results') && method === 'POST':
+        return this.saveResult(body);
+      case url.endsWith('/questions') && method === 'GET':
+        return this.getQuestions();
       default:
         return next.handle(request);
     }
@@ -51,6 +57,57 @@ export class FakeBackendInterceptor implements HttpInterceptor {
     }
   }
 
+  private saveResult(answers: Answer[]): Observable<HttpResponse<QuizResult>> {
+    return this.getQuizResult(this.randomId());
+  }
+
+  private getQuestions(): Observable<HttpResponse<Question[]>> {
+    return this.ok([
+      {
+        id: 1,
+        title: 'Q1',
+        answers: [
+          {
+            id: 1,
+            text: 'Ans 1'
+          },
+          {
+            id: 2,
+            text: 'Ans 2'
+          },
+        ]
+      },
+      {
+        id: 2,
+        title: 'Q2',
+        answers: [
+          {
+            id: 3,
+            text: 'Ans 21'
+          },
+          {
+            id: 4,
+            text: 'Ans 22'
+          },
+        ]
+      },
+      {
+        id: 3,
+        title: 'Q3',
+        answers: [
+          {
+            id: 5,
+            text: 'Ans 31'
+          },
+          {
+            id: 6,
+            text: 'Ans 32'
+          },
+        ]
+      },
+    ]);
+  }
+
   private ok(body?: any): Observable<HttpResponse<any>> {
     return of(new HttpResponse({ status: 200, body }));
   }
@@ -58,6 +115,10 @@ export class FakeBackendInterceptor implements HttpInterceptor {
   private idFromUrl(url: string): number {
     const urlParts = url.split('/');
     return Number(urlParts[urlParts.length - 1]);
+  }
+
+  private randomId(): number {
+    return new Date().getTime() % 10000;
   }
 }
 
