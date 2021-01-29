@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,13 +7,17 @@ import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg
 })
 export class HeaderComponent implements OnInit {
 
-  faFacebook = faFacebook;
-  faTwitter = faTwitter;
-  faInstagram = faInstagram;
+  @Input() stickyOffset = 0;
+  stickyTopbar = false;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  @HostListener('window:scroll', [])
+  onScroll(): void {
+    this.stickyTopbar = window.pageYOffset >= this.stickyOffset;
   }
 
 }

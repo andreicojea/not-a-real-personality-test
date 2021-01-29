@@ -1,0 +1,23 @@
+@import '../../../variables.scss';
+
+:host {
+  display: inline-block;
+}
+
+button {
+  display: block;
+  background: $white;
+  border: none;
+  border-radius: 100px;
+  box-shadow: 0px 4px 4px rgba(#000000, 25%);
+  font-size: 48px;
+  line-height: 86px;
+  padding: 0 110px;
+  outline: none;
+  cursor: pointer;
+  transition: all 150ms ease;
+  &:hover:not(:active) {
+    transform: translateY(-5%);
+    box-shadow: 0px 10px 4px rgba(#000000, 25%);
+  }
+}

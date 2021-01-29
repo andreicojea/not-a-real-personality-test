@@ -1,0 +1,18 @@
+:host {
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+.scroll-down-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  padding: 40px;
+  app-mouse-icon {
+    margin-left: 16px;
+  }
+}

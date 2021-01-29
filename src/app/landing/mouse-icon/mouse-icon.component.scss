@@ -1,0 +1,46 @@
+@import '../../../variables.scss';
+
+
+@keyframes wheel {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  75% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100%   {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+:host {
+  display: inline-block;
+  width: 26px;
+  height: 40px;
+  border: 2px solid $header-text-color;
+  border-radius: 16px;
+  position: relative;
+}
+
+.mouse-scroll {
+  display: block;
+  height: 6px;
+  width: 0;
+  border: 1px solid $header-text-color;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  margin-left: -1px;
+  animation: wheel 4s ease infinite;
+}
