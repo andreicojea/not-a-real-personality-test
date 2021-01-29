@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path: 'result',
     loadChildren: () => import('./result/result.module').then(m => m.ResultModule)
+  },
+  {
+    path: '**',
+    redirectTo: '/'
   }
 ];
 

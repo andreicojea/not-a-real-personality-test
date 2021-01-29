@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { PersonalityType } from './../../core/enums/personality-type.enum';
+import { Component, Input, OnInit } from '@angular/core';
+import startCase from 'lodash.startcase';
 
 @Component({
   selector: 'app-result-header',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultHeaderComponent implements OnInit {
 
+  @Input() personalityType!: PersonalityType;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  getTitle(): string {
+    const formattedType = startCase(this.personalityType.toLowerCase());
+    return `You are an ${formattedType}!`;
+  }
+
+  getImage(): string {
+    return `assets/${this.personalityType.toLowerCase()}.png`;
   }
 
 }

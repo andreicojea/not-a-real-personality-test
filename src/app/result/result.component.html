@@ -1,9 +1,9 @@
-<app-result-header></app-result-header>
+<app-result-header [personalityType]="quizResult.personalityType"></app-result-header>
 <div class="container">
   <div class="section personality-scale-container">
-    <app-personality-scale [value]="75"></app-personality-scale>
+    <app-personality-scale [value]="quizResult.scaleValue"></app-personality-scale>
   </div>
-  <div class="section">
+  <div class="section" *ngIf="quizResult.personalityType !== personalityTypes.INTROVERT">
     <h3>If You’re More of an Extrovert...</h3>
     <p>If your quiz result shows that you’re more of an extrovert, you tend to...</p>
     <ul>
@@ -15,6 +15,20 @@
       <li>Express yourself well verbally.</li>
       <li>May seem “always on the go.”</li>
       <li>May come across as confident, friendly, and assertive.</li>
+    </ul>
+  </div>
+  <div class="section" *ngIf="quizResult.personalityType !== personalityTypes.EXTROVERT">
+    <h3>If You’re More of an Introvert...</h3>
+    <p>If your quiz result shows that you’re more of an introvert, you tend to...</p>
+    <ul>
+      <li>Look at life from the inside out.</li>
+      <li>Gain energy through inner reflection and solitude.</li>
+      <li>Get more excited by ideas than by external activities.</li>
+      <li>Prefer a few deep, close relationships to many casual ones.</li>
+      <li>Feel tired and drained after socializing, even if you enjoyed it.</li>
+      <li>Listen well and expect others to do the same.</li>
+      <li>Think first and talk later.</li>
+      <li>Express yourself well in writing.</li>
     </ul>
   </div>
 </div>
