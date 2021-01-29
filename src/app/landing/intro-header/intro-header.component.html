@@ -1,9 +1,15 @@
-<app-header [stickyOffset]="400">
-  <img src="assets/introvert_vs_extrovert.png" alt="Introvert vs Extrovert">
-  <h1>Are you an Introvert or an Extrovert?</h1>
-  <app-button>Start Test</app-button>
-  <div class="scroll-down-indicator">
-    Or scroll down to read more
-    <app-mouse-icon></app-mouse-icon>
+<app-header [stickyOffset]="400" [style.height.px]="fullHeight">
+  <div class="container">
+    <div class="header-image">
+      <img src="assets/introvert_vs_extrovert.png" alt="Introvert vs Extrovert">
+    </div>
+    <div class="header-main">
+      <h1>Are you an Introvert or an Extrovert?</h1>
+      <app-button>Start Test</app-button>
+    </div>
+    <div class="scroll-down-indicator">
+      Or scroll down to read more
+      <app-mouse-icon></app-mouse-icon>
+    </div>
   </div>
 </app-header>

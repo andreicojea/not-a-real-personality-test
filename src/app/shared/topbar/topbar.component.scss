@@ -20,13 +20,13 @@
 
   &.sticky {
     position: fixed;
-    height: 100px;
+    height: 70px;
     padding-top: 5px;
     background: $header-background;
     border-bottom: 5px solid $header-accent;
     animation: fadein 300ms;
     .logo {
-      width: 214px;
+      width: 180px;
     }
   }
 }
