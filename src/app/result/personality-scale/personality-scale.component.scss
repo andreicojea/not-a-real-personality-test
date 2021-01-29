@@ -1,0 +1,21 @@
+:host {
+  display: inline-block;
+}
+
+.indicator-container {
+  width: 90%;
+  height: 90px;
+  margin: 0 auto;
+  position: relative;
+  .indicator {
+    position: absolute;
+    transform: translateX(-50%);
+  }
+}
+
+.scale-container {
+  width: 1086px;
+  .scale {
+    width: 100%;
+  }
+}
