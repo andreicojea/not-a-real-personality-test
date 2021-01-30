@@ -6,6 +6,7 @@ import { delay, materialize, dematerialize } from 'rxjs/operators';
 import { PersonalityType } from '../enums/personality-type.enum';
 import { Question } from '../types/question';
 import { Answer } from '../types/answer';
+import { questions, results } from './fake-db.json';
 
 @Injectable()
 export class FakeBackendInterceptor implements HttpInterceptor {
@@ -37,23 +38,11 @@ export class FakeBackendInterceptor implements HttpInterceptor {
   private getQuizResult(id: number): Observable<HttpResponse<QuizResult>> {
     switch (id % 3) {
       case 0:
-        return this.ok({
-          id,
-          personalityType: PersonalityType.introvert,
-          scaleValue: 25
-        });
+        return this.ok(results.introvert);
       case 1:
-        return this.ok({
-          id,
-          personalityType: PersonalityType.ambivert,
-          scaleValue: 45
-        });
+        return this.ok(results.extrovert);
       default:
-        return this.ok({
-          id,
-          personalityType: PersonalityType.extrovert,
-          scaleValue: 80
-        });
+        return this.ok(results.ambivert);
     }
   }
 
@@ -62,106 +51,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
   }
 
   private getQuestions(): Observable<HttpResponse<Question[]>> {
-    return this.ok([
-      {
-        id: 1,
-        title: `You're planning a night out.\nWhich option sounds more fun?`,
-        answers: [
-          {
-            id: 1,
-            text: `Going out with a group of friends. The more people, the more energy you feel.`
-          },
-          {
-            id: 2,
-            text: `Dinner with your best friend — just the two of you — and sharing what's on your mind`
-          },
-        ]
-      },
-      {
-        id: 2,
-        title: 'If you were forced to chose one,\nwhich would you choose?',
-        answers: [
-          {
-            id: 3,
-            text: 'A weekend with zero social plans'
-          },
-          {
-            id: 4,
-            text: 'A weekend packed with social plans'
-          },
-        ]
-      },
-      {
-        id: 3,
-        title: 'As a student, would you rather...',
-        answers: [
-          {
-            id: 5,
-            text: 'Participate in a lively discussion'
-          },
-          {
-            id: 6,
-            text: 'Listen to an interesting lecture'
-          },
-        ]
-      },
-      {
-        id: 4,
-        title: 'In general, after attending a large party or networking event, how do you feel?',
-        answers: [
-          {
-            id: 7,
-            text: 'Energized and ready for more'
-          },
-          {
-            id: 8,
-            text: 'Tired and drained, even if I had fun'
-          },
-        ]
-      },
-      {
-        id: 5,
-        title: `You've just met someone new.\nHow would they describe you?`,
-        answers: [
-          {
-            id: 9,
-            text: 'Outgoing, talkative, and friendly'
-          },
-          {
-            id: 10,
-            text: 'Quiet, reserved, and calm'
-          },
-        ]
-      },
-      {
-        id: 6,
-        title: `In general, which statement\nis most true for you?`,
-        answers: [
-          {
-            id: 11,
-            text: `I don't mind multi-tasking, and I often do it.`
-          },
-          {
-            id: 12,
-            text: 'I like to focus deeply on one thing at a time rather than jump from task to task.'
-          },
-        ]
-      },
-      {
-        id: 7,
-        title: `You and a coworker have a disagreement.\nHow do you react?`,
-        answers: [
-          {
-            id: 12,
-            text: `I become quiet in the moment but may bring up the problem later. I often need time to process before I can talk.`
-          },
-          {
-            id: 13,
-            text: `I don't hold back my thoughts. Better to get it all out there, right away.`
-          },
-        ]
-      },
-    ]);
+    return this.ok(questions);
   }
 
   private ok(body?: any): Observable<HttpResponse<any>> {
