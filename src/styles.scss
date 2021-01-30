@@ -1,14 +1,19 @@
-@import '../node_modules/reset-css/sass/reset';
-@import 'variables';
+@import "../node_modules/reset-css/sass/reset";
+@import "variables";
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: $text-color;
   line-height: 1.5;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Oleo Script', cursive;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Oleo Script", cursive;
   margin-bottom: 20px;
 }
 
@@ -32,7 +37,8 @@ h5 {
   font-size: 18px;
 }
 
-p, ul {
+p,
+ul {
   font-size: 18px;
   margin-bottom: 20px;
 }
@@ -41,7 +47,7 @@ ul {
   line-height: 2em;
   li {
     &:before {
-      content: '➔';
+      content: "➔";
       padding: 0 20px;
     }
   }
@@ -60,7 +66,7 @@ strong {
 }
 
 button {
-  font-family: 'Oleo Script', cursive;
+  font-family: "Oleo Script", cursive;
 }
 
 .container {

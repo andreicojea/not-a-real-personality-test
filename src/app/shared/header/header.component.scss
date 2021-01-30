@@ -1,4 +1,4 @@
-@import '../../../variables.scss';
+@import "../../../variables.scss";
 
 :host {
   display: block;
@@ -9,7 +9,12 @@
   position: relative;
   padding-top: 80px;
   ::ng-deep {
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       text-shadow: 0px 4px 4px rgba($black, 25%);
       margin-bottom: 30px;
     }
