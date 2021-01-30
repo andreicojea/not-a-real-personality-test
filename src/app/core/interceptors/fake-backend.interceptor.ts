@@ -38,11 +38,11 @@ export class FakeBackendInterceptor implements HttpInterceptor {
   private getQuizResult(id: number): Observable<HttpResponse<QuizResult>> {
     switch (id % 3) {
       case 0:
-        return this.ok(results.introvert);
+        return this.ok({ ...results.introvert, id });
       case 1:
-        return this.ok(results.extrovert);
+        return this.ok({ ...results.extrovert, id });
       default:
-        return this.ok(results.ambivert);
+        return this.ok({ ...results.ambivert, id });
     }
   }
 
