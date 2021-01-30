@@ -1,6 +1,6 @@
-import { PersonalityType } from './../../core/enums/personality-type.enum';
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import startCase from 'lodash.startcase';
+import { PersonalityType } from './../../core/enums/personality-type.enum';
 
 @Component({
   selector: 'app-result-header',

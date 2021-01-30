@@ -1,4 +1,4 @@
-import { PersonalityType } from "../enums/personality-type.enum";
+import { PersonalityType } from '../enums/personality-type.enum';
 
 export interface QuizResult {
   id: number;

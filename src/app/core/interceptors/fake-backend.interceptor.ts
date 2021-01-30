@@ -39,19 +39,19 @@ export class FakeBackendInterceptor implements HttpInterceptor {
       case 0:
         return this.ok({
           id,
-          personalityType: PersonalityType.INTROVERT,
+          personalityType: PersonalityType.introvert,
           scaleValue: 25
         });
       case 1:
         return this.ok({
           id,
-          personalityType: PersonalityType.AMBIVERT,
+          personalityType: PersonalityType.ambivert,
           scaleValue: 45
         });
       default:
         return this.ok({
           id,
-          personalityType: PersonalityType.EXTROVERT,
+          personalityType: PersonalityType.extrovert,
           scaleValue: 80
         });
     }

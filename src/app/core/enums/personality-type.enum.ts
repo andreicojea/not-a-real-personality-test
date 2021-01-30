@@ -1,5 +1,6 @@
+// eslint-disable-next-line no-shadow
 export enum PersonalityType {
-  INTROVERT = 'INTROVERT',
-  EXTROVERT = 'EXTROVERT',
-  AMBIVERT = 'AMBIVERT'
+  introvert = 'INTROVERT',
+  extrovert = 'EXTROVERT',
+  ambivert = 'AMBIVERT'
 }

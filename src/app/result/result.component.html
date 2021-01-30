@@ -3,7 +3,7 @@
   <div class="section personality-scale-container">
     <app-personality-scale [value]="quizResult.scaleValue"></app-personality-scale>
   </div>
-  <div class="section" *ngIf="quizResult.personalityType !== personalityTypes.INTROVERT">
+  <div class="section" *ngIf="quizResult.personalityType !== personalityTypes.introvert">
     <h3>If You’re More of an Extrovert...</h3>
     <p>If your quiz result shows that you’re more of an extrovert, you tend to...</p>
     <ul>
@@ -17,7 +17,7 @@
       <li>May come across as confident, friendly, and assertive.</li>
     </ul>
   </div>
-  <div class="section" *ngIf="quizResult.personalityType !== personalityTypes.EXTROVERT">
+  <div class="section" *ngIf="quizResult.personalityType !== personalityTypes.extrovert">
     <h3>If You’re More of an Introvert...</h3>
     <p>If your quiz result shows that you’re more of an introvert, you tend to...</p>
     <ul>

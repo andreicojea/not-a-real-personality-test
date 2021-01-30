@@ -10,22 +10,21 @@ import { Answer } from './../../core/types/answer';
 })
 export class QuizAnswerComponent implements OnInit {
 
-  faCheck = faCheck;
-
   @Input() answer!: Answer;
   @Input() isChecked!: boolean;
   @Input() disabled!: boolean;
-
   @Output() check = new EventEmitter<Answer>();
 
-  constructor() { }
+  faCheck = faCheck;
 
-  ngOnInit(): void {
-  }
+  constructor() { }
 
   @HostListener('click')
   onClick(): void {
     this.check.emit(this.answer);
+  }
+
+  ngOnInit(): void {
   }
 
 }

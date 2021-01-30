@@ -18,13 +18,13 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-    this.onScroll();
-  }
-
   @HostListener('window:scroll')
   onScroll(): void {
     this.stickyTopbar = window.pageYOffset >= this.stickyOffset;
+  }
+
+  ngOnInit(): void {
+    this.onScroll();
   }
 
 }
