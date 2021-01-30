@@ -11,7 +11,7 @@
     </app-quiz-question>
   </div>
   <div class="section narrow-section button-section">
-    <button app-button (click)="next()" [disabled]="!canGoNext()">
+    <button app-button color="accent" (click)="next()" [disabled]="!canGoNext()">
       {{ getButtonText() }}
     </button>
   </div>

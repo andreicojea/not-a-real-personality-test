@@ -4,10 +4,9 @@
   display: inline-block;
   text-decoration: none;
   font-family: 'Oleo Script', cursive;
-  background: $white;
   border: none;
   border-radius: 100px;
-  box-shadow: 0px 4px 4px rgba(#000000, 25%);
+  box-shadow: 0px 4px 4px rgba($black, 25%);
   font-size: 36px;
   line-height: 64px;
   padding: 0 70px;
@@ -16,6 +15,21 @@
   transition: all 150ms ease;
   &:hover:not(:active) {
     transform: translateY(-5%);
-    box-shadow: 0px 10px 4px rgba(#000000, 25%);
+    box-shadow: 0px 10px 4px rgba($black, 25%);
+  }
+
+  &.color-default {
+    background: $white;
+    color: $text-color;
+    &[disabled] {
+      color: rgba($text-color, 60%);
+    }
+  }
+  &.color-accent {
+    background: $terracotta;
+    color: $white;
+    &[disabled] {
+      color: rgba($white, 60%);
+    }
   }
 }
