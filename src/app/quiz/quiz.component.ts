@@ -1,6 +1,6 @@
 import { QuizResultService } from './../core/services/quiz-result.service';
 import { Question } from './../core/types/question.d';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Answer } from '../core/types/answer';
 import { Subscription } from 'rxjs';
@@ -8,7 +8,8 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-quiz',
   templateUrl: './quiz.component.html',
-  styleUrls: ['./quiz.component.scss']
+  styleUrls: ['./quiz.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class QuizComponent implements OnInit, OnDestroy {
 

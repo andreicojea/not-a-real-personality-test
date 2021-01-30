@@ -1,11 +1,12 @@
 import { PersonalityType } from './../../core/enums/personality-type.enum';
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import startCase from 'lodash.startcase';
 
 @Component({
   selector: 'app-result-header',
   templateUrl: './result-header.component.html',
-  styleUrls: ['./result-header.component.scss']
+  styleUrls: ['./result-header.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ResultHeaderComponent implements OnInit {
 
