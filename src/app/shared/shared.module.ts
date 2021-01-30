@@ -21,6 +21,7 @@ import { TopbarComponent } from './topbar/topbar.component';
   ],
   exports: [
     CommonModule,
+    RouterModule,
     FontAwesomeModule,
     HeaderComponent,
     FooterComponent,
