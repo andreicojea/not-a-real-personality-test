@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng deploy --base-href=/not-a-real-personality-test/ --name=andreicojea --email=andreicojea@gmail.com --no-silent"
+    "e2e:ci": "ng test --watch=false --browsers=ChromeHeadless",
+    "deploy:ci": "ng deploy --base-href=/not-a-real-personality-test/ --name=andreicojea --email=andreicojea@gmail.com --no-silent"
   },
   "private": true,
   "dependencies": {
