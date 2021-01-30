@@ -1,5 +1,5 @@
 import { QuizResultService } from './../core/services/quiz-result.service';
-import { Question } from './../core/types/question.d';
+import { Question } from './../core/types/question';
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Answer } from '../core/types/answer';

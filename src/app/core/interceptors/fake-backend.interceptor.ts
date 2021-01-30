@@ -1,4 +1,4 @@
-import { QuizResult } from './../types/quiz-result.d';
+import { QuizResult } from './../types/quiz-result';
 import { Injectable } from '@angular/core';
 import { HttpRequest, HttpResponse, HttpHandler, HttpEvent, HttpInterceptor, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
@@ -144,6 +144,20 @@ export class FakeBackendInterceptor implements HttpInterceptor {
           {
             id: 12,
             text: 'I like to focus deeply on one thing at a time rather than jump from task to task.'
+          },
+        ]
+      },
+      {
+        id: 7,
+        title: `You and a coworker have a disagreement.\nHow do you react?`,
+        answers: [
+          {
+            id: 12,
+            text: `I become quiet in the moment but may bring up the problem later. I often need time to process before I can talk.`
+          },
+          {
+            id: 13,
+            text: `I don't hold back my thoughts. Better to get it all out there, right away.`
           },
         ]
       },

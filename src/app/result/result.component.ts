@@ -1,5 +1,5 @@
 import { PersonalityType } from './../core/enums/personality-type.enum';
-import { QuizResult } from './../core/types/quiz-result.d';
+import { QuizResult } from './../core/types/quiz-result';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 

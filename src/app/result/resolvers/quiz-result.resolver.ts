@@ -1,11 +1,8 @@
-import { QuizResult } from './../../core/types/quiz-result.d';
-import { QuizResultService } from './../../core/services/quiz-result.service';
 import { Injectable } from '@angular/core';
-import {
-  Resolve,
-  ActivatedRouteSnapshot
-} from '@angular/router';
+import { Resolve, ActivatedRouteSnapshot } from '@angular/router';
 import { Observable } from 'rxjs';
+import { QuizResult } from './../../core/types/quiz-result';
+import { QuizResultService } from './../../core/services/quiz-result.service';
 
 @Injectable({
   providedIn: 'root'
