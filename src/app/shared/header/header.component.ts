@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
     this.onScroll();
   }
 
-  @HostListener('window:scroll', [])
+  @HostListener('window:scroll')
   onScroll(): void {
     this.stickyTopbar = window.pageYOffset >= this.stickyOffset;
   }

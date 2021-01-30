@@ -5,12 +5,12 @@
     <h4>Question {{currentQuestionIndex + 1}}/{{questions.length}}</h4>
     <app-quiz-progress [value]="getProgress()"></app-quiz-progress>
   </div>
-  <div class="section">
-    <app-quiz-question [question]="questions[currentQuestionIndex]" (answerSelected)="setAnswer($event)"
-      [selectionDisabled]="isSaving">
+  <div class="section narrow-section">
+    <app-quiz-question [question]="questions[currentQuestionIndex]" [currentAnswer]="answers[currentQuestionIndex]"
+      (answerSelect)="setAnswer($event)" [selectionDisabled]="isSaving">
     </app-quiz-question>
   </div>
-  <div class="section">
+  <div class="section narrow-section button-section">
     <button app-button (click)="next()" [disabled]="!canGoNext()">
       {{ getButtonText() }}
     </button>

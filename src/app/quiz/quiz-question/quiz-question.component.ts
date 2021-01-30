@@ -12,7 +12,7 @@ export class QuizQuestionComponent implements OnInit {
   @Input() question!: Question;
   @Input() currentAnswer!: Answer;
   @Input() selectionDisabled = false;
-  @Output() answerSelected = new EventEmitter<Answer>();
+  @Output() answerSelect = new EventEmitter<Answer>();
 
   constructor() { }
 

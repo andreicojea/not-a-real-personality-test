@@ -23,6 +23,7 @@
     "@fortawesome/angular-fontawesome": "^0.8.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-brands-svg-icons": "^5.15.2",
+    "@fortawesome/free-regular-svg-icons": "^5.15.2",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "lodash.startcase": "^4.4.0",
     "reset-css": "^5.0.1",

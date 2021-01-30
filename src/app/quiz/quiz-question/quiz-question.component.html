@@ -1,8 +1,4 @@
 <h2>{{ question.title }}</h2>
-<ul>
-  <li *ngFor="let answer of question.answers">
-    <button (click)="answerSelected.emit(answer)" [disabled]="selectionDisabled">
-      {{ answer.text }}
-    </button>
-  </li>
-</ul>
+<app-quiz-answer *ngFor="let answer of question.answers; let index = index" [answer]="answer"
+  [isChecked]="currentAnswer?.id === answer.id" (check)="answerSelect.emit(answer)" [disabled]="selectionDisabled">
+</app-quiz-answer>
