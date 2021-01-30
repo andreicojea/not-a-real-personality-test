@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng deploy --base-href=/not-a-real-personality-test/"
+    "deploy": "ng deploy --base-href=/not-a-real-personality-test/ --no-silent"
   },
   "private": true,
   "dependencies": {
