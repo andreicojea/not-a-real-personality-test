@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "test:ci": "ng test --watch=false --browsers=ChromeHeadless",
+    "test:ci": "ng test --karma-config=karma.conf.ci.js",
     "e2e:ci": "ng e2e --protractor-config e2e/protractor.conf.ci.js",
     "deploy:ci": "ng deploy --base-href=/not-a-real-personality-test/ --name=andreicojea --email=andreicojea@gmail.com --no-silent"
   },

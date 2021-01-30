@@ -2,15 +2,15 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ResultComponent } from './result.component';
 
-describe('ResultComponent', () => {
+xdescribe('ResultComponent', () => {
   let component: ResultComponent;
   let fixture: ComponentFixture<ResultComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ResultComponent ]
+      declarations: [ResultComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

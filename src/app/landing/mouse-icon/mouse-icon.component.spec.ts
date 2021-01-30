@@ -2,15 +2,15 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MouseIconComponent } from './mouse-icon.component';
 
-describe('MouseIconComponent', () => {
+xdescribe('MouseIconComponent', () => {
   let component: MouseIconComponent;
   let fixture: ComponentFixture<MouseIconComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MouseIconComponent ]
+      declarations: [MouseIconComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
