@@ -1,24 +1,19 @@
-import { QuizResultResolver } from './resolvers/quiz-result.resolver';
 import { NgModule } from '@angular/core';
-import { ResultRoutingModule } from './result-routing.module';
-import { ResultComponent } from './result.component';
 import { SharedModule } from '../shared/shared.module';
+import { ResultRoutingModule } from './result-routing.module';
+import { ResultPageComponent } from './result-page/result-page.component';
 import { ResultHeaderComponent } from './result-header/result-header.component';
 import { PersonalityScaleComponent } from './personality-scale/personality-scale.component';
 
-
 @NgModule({
   declarations: [
-    ResultComponent,
+    ResultPageComponent,
     ResultHeaderComponent,
     PersonalityScaleComponent
   ],
   imports: [
     SharedModule,
     ResultRoutingModule
-  ],
-  providers: [
-    QuizResultResolver
   ]
 })
 export class ResultModule { }

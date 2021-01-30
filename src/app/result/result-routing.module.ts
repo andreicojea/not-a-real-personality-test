@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { QuizResultResolver } from './resolvers/quiz-result.resolver';
-import { ResultComponent } from './result.component';
+import { ResultPageComponent } from './result-page/result-page.component';
 
 const routes: Routes = [
   {
@@ -11,7 +11,7 @@ const routes: Routes = [
   },
   {
     path: ':id',
-    component: ResultComponent,
+    component: ResultPageComponent,
     resolve: {
       quizResult: QuizResultResolver
     }

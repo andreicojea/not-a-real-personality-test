@@ -1,17 +1,17 @@
-import { QuizResult } from './../core/types/quiz-result.d';
-import { QuizProgressComponent } from './quiz-progress/quiz-progress.component';
-import { QuizAnswerComponent } from './quiz-answer/quiz-answer.component';
-import { SharedModule } from './../shared/shared.module';
-import { QuizQuestionComponent } from './quiz-question/quiz-question.component';
+import { QuizResult } from '../../core/types/quiz-result';
+import { QuizProgressComponent } from '../quiz-progress/quiz-progress.component';
+import { QuizAnswerComponent } from '../quiz-answer/quiz-answer.component';
+import { SharedModule } from '../../shared/shared.module';
+import { QuizQuestionComponent } from '../quiz-question/quiz-question.component';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { QuizComponent } from './quiz.component';
-import { Question } from '../core/types/question';
+import { QuizPageComponent } from './quiz-page.component';
+import { Question } from '../../core/types/question';
 import { By } from '@angular/platform-browser';
-import { runOnPushChangeDetection } from '../../test/on-push-change-detection.helper';
-import { QuizResultService } from '../core/services/quiz-result.service';
-import { PersonalityType } from '../core/enums/personality-type.enum';
+import { runOnPushChangeDetection } from '../../../test/on-push-change-detection.helper';
+import { QuizResultService } from '../../core/services/quiz-result.service';
+import { PersonalityType } from '../../core/enums/personality-type.enum';
 import { of } from 'rxjs';
 
 const mockQuestions: Question[] = [
@@ -51,13 +51,13 @@ const mockResult: QuizResult = {
   scaleValue: 60
 };
 
-describe('QuizComponent', () => {
-  let component: QuizComponent;
-  let fixture: ComponentFixture<QuizComponent>;
+describe('QuizPageComponent', () => {
+  let component: QuizPageComponent;
+  let fixture: ComponentFixture<QuizPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [QuizComponent, QuizQuestionComponent, QuizAnswerComponent, QuizProgressComponent],
+      declarations: [QuizPageComponent, QuizQuestionComponent, QuizAnswerComponent, QuizProgressComponent],
       imports: [SharedModule, RouterModule.forRoot([]), HttpClientTestingModule],
       providers: [
         {
@@ -75,7 +75,7 @@ describe('QuizComponent', () => {
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(QuizComponent);
+    fixture = TestBed.createComponent(QuizPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

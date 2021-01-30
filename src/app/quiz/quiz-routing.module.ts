@@ -1,11 +1,11 @@
 import { QuizQuestionsResolver } from './resolvers/quiz-questions.resolver';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { QuizComponent } from './quiz.component';
+import { QuizPageComponent } from './quiz-page/quiz-page.component';
 
 const routes: Routes = [{
   path: '',
-  component: QuizComponent,
+  component: QuizPageComponent,
   resolve: {
     questions: QuizQuestionsResolver
   }

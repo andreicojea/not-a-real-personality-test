@@ -1,15 +1,15 @@
-import { PersonalityType } from './../core/enums/personality-type.enum';
-import { QuizResult } from './../core/types/quiz-result';
+import { PersonalityType } from '../../core/enums/personality-type.enum';
+import { QuizResult } from '../../core/types/quiz-result';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-result',
-  templateUrl: './result.component.html',
-  styleUrls: ['./result.component.scss'],
+  selector: 'app-result-page',
+  templateUrl: './result-page.component.html',
+  styleUrls: ['./result-page.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ResultComponent implements OnInit {
+export class ResultPageComponent implements OnInit {
 
   quizResult!: QuizResult;
   personalityTypes = PersonalityType;

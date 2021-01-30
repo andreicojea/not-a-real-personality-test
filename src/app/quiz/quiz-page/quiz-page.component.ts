@@ -1,17 +1,17 @@
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { QuizResultService } from './../core/services/quiz-result.service';
-import { Question } from './../core/types/question';
-import { Answer } from '../core/types/answer';
+import { QuizResultService } from '../../core/services/quiz-result.service';
+import { Question } from '../../core/types/question';
+import { Answer } from '../../core/types/answer';
 
 @Component({
-  selector: 'app-quiz',
-  templateUrl: './quiz.component.html',
-  styleUrls: ['./quiz.component.scss'],
+  selector: 'app-quiz-page',
+  templateUrl: './quiz-page.component.html',
+  styleUrls: ['./quiz-page.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class QuizComponent implements OnInit, OnDestroy {
+export class QuizPageComponent implements OnInit, OnDestroy {
 
   questions!: Question[];
   answers: Answer[] = [];

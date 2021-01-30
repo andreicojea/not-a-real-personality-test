@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
-import { QuizRoutingModule } from './quiz-routing.module';
-import { QuizComponent } from './quiz.component';
 import { SharedModule } from '../shared/shared.module';
+import { QuizRoutingModule } from './quiz-routing.module';
+import { QuizPageComponent } from './quiz-page/quiz-page.component';
 import { QuizProgressComponent } from './quiz-progress/quiz-progress.component';
 import { QuizQuestionComponent } from './quiz-question/quiz-question.component';
 import { QuizAnswerComponent } from './quiz-answer/quiz-answer.component';
 
 @NgModule({
   declarations: [
-    QuizComponent,
+    QuizPageComponent,
     QuizProgressComponent,
     QuizQuestionComponent,
     QuizAnswerComponent

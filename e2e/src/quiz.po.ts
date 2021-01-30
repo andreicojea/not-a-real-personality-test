@@ -4,7 +4,7 @@ export class QuizPage {
 
   pageUrl = `${browser.baseUrl}quiz`;
 
-  questionTitleElement = element(by.css('app-quiz h2'));
+  questionTitleElement = element(by.css('app-quiz-page h2'));
   nextButtonElement = element(by.buttonText('Next'));
   finishButtonElement = element(by.buttonText('Finish'));
   answerElements = element.all(by.tagName('app-quiz-answer'));
