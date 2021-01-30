@@ -94,12 +94,12 @@
     "extrovert": {
       "id": 2,
       "personalityType": "EXTROVERT",
-      "scaleValue": 45
+      "scaleValue": 80
     },
     "ambivert": {
       "id": 3,
       "personalityType": "AMBIVERT",
-      "scaleValue": 80
+      "scaleValue": 45
     }
   }
 }
